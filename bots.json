@@ -6332,6 +6332,123 @@
    ],
    "hero": "gentle",
    "races": []
+  },
+  {
+   "id": "bryuichi",
+   "name": "Рюичи",
+   "short": "Глава клана Кендзи, один из самых жестоких боссов якудза, пришедший к власти через кровавый переворот. Холодный стратег, который живёт по закону клана: или ты наверху, или тебя уже нет.",
+   "full": "Рюичи — глава клана Кендзи, один из самых влиятельных и жестоких боссов якудза Японии, пришедший к власти через кровавый переворот. Холодный, высокомерный и самовлюблённый стратег, он живёт по единственному закону клана: или ты наверху, или тебя уже нет. Он предан традициям и кодексу якудза, но при этом не знает жалости и всегда проверяет на прочность как врагов, так и своих людей, и даже собственную жену.",
+   "status": "live",
+   "tags": [
+    "антигероиня",
+    "одержимость"
+   ],
+   "postUrl": "https://t.me/Ksyu0102cai/4309",
+   "added": "2026-11-12",
+   "img": "img/bryuichi.jpg",
+   "imgData": "",
+   "genres": [
+    "modern",
+    "dark"
+   ],
+   "links": [
+    {
+     "platform": "Janitor AI",
+     "url": "https://janitorai.com/characters/36464dee-e1c2-4085-b208-ff4db20c366f_character-ryuichi-kenji"
+    },
+    {
+     "platform": "Character.AI",
+     "url": "https://share.character.ai/Wv9R/2xqb5eht"
+    },
+    {
+     "platform": "Xoul",
+     "url": "https://xoul.ai/xoul/RyuichiKenji..xo"
+    },
+    {
+     "platform": "Moescape",
+     "url": "https://moescape.ai/tavern/characters/472eadee-b2c2-4b60-b644-3859547eb034"
+    },
+    {
+     "platform": "HiWaifu",
+     "url": "https://beta.hiwaifu.com/robot/robotdetails?robots_id=17684512"
+    },
+    {
+     "platform": "DokiChat",
+     "url": "https://www.dokichat.club/chat/ea3dcf93-317c-42f0-941c-06eabba26974?isShare=true"
+    },
+    {
+     "platform": "SeaSoul",
+     "url": "https://www.seasoul.ai/character-chat?characterId=d7b1cfle878c73dj9jig"
+    },
+    {
+     "platform": "Chai",
+     "url": "https://web.chai-research.com/chat/_bot_733b0c4f-ae23-49b9-9cd6-920bb0ddbb03"
+    },
+    {
+     "platform": "Sakura",
+     "url": "https://www.sakura.fm/ru/chat/0Cya3GU"
+    }
+   ],
+   "hero": "dangerous",
+   "races": []
+  },
+  {
+   "id": "bkardan",
+   "name": "Кардан",
+   "short": "Генерал императорской армии из влиятельной военной династии. Высокомерный, циничный и саркастичный командир, который умеет быть обаятельным, когда захочет.",
+   "full": "Кардан — генерал императорской армии из влиятельной военной династии, умный и расчётливый командир. Он высокомерен, самоуверен и привык что мир складывается так как ему удобно, и искренне не понимает людей которые думают иначе. Кардан циничен, саркастичен, обладает чувством юмора который многих ставит в тупик, и при этом умеет быть обаятельным когда захочет.",
+   "status": "live",
+   "tags": [
+    "от врагов к любви",
+    "юмор"
+   ],
+   "postUrl": "https://t.me/Ksyu0102cai/4298",
+   "added": "2026-11-12",
+   "img": "img/bkardan.jpg",
+   "imgData": "",
+   "genres": [
+    "medieval"
+   ],
+   "links": [
+    {
+     "platform": "Character.AI",
+     "url": "https://share.character.ai/Wv9R/qdaa8rqr"
+    },
+    {
+     "platform": "Janitor AI",
+     "url": "https://janitorai.com/characters/a8104bb2-0a72-4252-91b8-4cc04485f870_character-kardan"
+    },
+    {
+     "platform": "Xoul",
+     "url": "https://xoul.ai/xoul/KardanKardan.xo"
+    },
+    {
+     "platform": "Moescape",
+     "url": "https://moescape.ai/tavern/characters/ece4dcc4-3677-4de6-93aa-335661e5a8d6"
+    },
+    {
+     "platform": "HiWaifu",
+     "url": "https://beta.hiwaifu.com/robot/robotdetails?robots_id=17660386"
+    },
+    {
+     "platform": "DokiChat",
+     "url": "https://www.dokichat.club/chat/df996a41-2638-4708-85bc-56eddb20f407?isShare=true"
+    },
+    {
+     "platform": "SeaSoul",
+     "url": "https://www.seasoul.ai/character-chat?characterId=d7ackbte878c73d0ihng"
+    },
+    {
+     "platform": "Chai",
+     "url": "https://web.chai-research.com/chat/_bot_dba9c7ca-cb58-46a7-8cc7-2f945d6699af"
+    },
+    {
+     "platform": "Sakura",
+     "url": "https://www.sakura.fm/ru/chat/wjfA4rc"
+    }
+   ],
+   "hero": "cold",
+   "races": []
   }
  ],
  "mascot": {

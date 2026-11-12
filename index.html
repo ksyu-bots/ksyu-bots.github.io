@@ -476,6 +476,7 @@ body.dlg-open .leya, body.dlg-open .leya-wake { visibility: hidden; }
       <button class="btn ghost" type="button" id="edit-channel">Ссылка на канал</button>
       <span class="grow"></span>
       <span class="status-msg" id="status" role="status"></span>
+      <button class="btn ghost" type="button" id="import-btn">Загрузить ботов из файла</button><input type="file" id="import-file" accept=".json,application/json" hidden>
       <button class="btn ghost" type="button" id="owner-logout">Выйти</button>
     </div>
 
@@ -1178,6 +1179,35 @@ function bootSite(LOADED, GH) {
   $("quiz-note-img").innerHTML = leyaImg("");
   $("add-bot").addEventListener("click", function () { botForm(); });
   $("owner-logout").addEventListener("click", function () { GHAPI.logout(); location.reload(); });
+  // ---------- импорт ботов из файла ----------
+  $("import-btn").addEventListener("click", function () { $("import-file").value = ""; $("import-file").click(); });
+  $("import-file").addEventListener("change", function () {
+    var f = this.files && this.files[0]; if (!f) return;
+    var r = new FileReader();
+    r.onload = function () {
+      var data; try { data = JSON.parse(r.result); } catch (e) { setStatus("Это не тот файл: не получилось его прочитать"); return; }
+      var list = Array.isArray(data) ? data : (data && Array.isArray(data.bots) ? data.bots : null);
+      if (!list || !list.length) { setStatus("В файле нет ботов"); return; }
+      var next = clone(state), added = 0, updated = 0;
+      list.forEach(function (b) {
+        if (!b || !b.name) return;
+        b = clone(b);
+        if (!b.id) b.id = "b" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+        var m = String(b.imgData || "").match(/^data:image\/(jpeg|png|webp);base64,(.+)$/);
+        if (m) {
+          var path = "img/" + String(b.id).replace(/[^\w-]/g, "") + "." + (m[1] === "jpeg" ? "jpg" : m[1]);
+          pendingImgs[path] = m[2]; previews[path] = b.imgData; b.img = path; b.imgData = "";
+        }
+        var i = next.bots.findIndex(function (x) { return x.id === b.id || (b.postUrl && x.postUrl === b.postUrl); });
+        if (i >= 0) { b.id = next.bots[i].id; next.bots[i] = b; updated++; } else { next.bots.push(b); added++; }
+      });
+      if (!added && !updated) { setStatus("В файле нет ботов"); return; }
+      save(next, "Добавлено ботов: " + added + (updated ? ", обновлено: " + updated : "")).catch(function () {});
+    };
+    r.onerror = function () { setStatus("Не получилось открыть файл"); };
+    r.readAsText(f);
+  });
+
   $("owner-login").addEventListener("click", function () { GHAPI.loginDialog(openDialog); });
   if (canEdit) {
     $("ownerbar").hidden = false; $("owner-login").hidden = true;

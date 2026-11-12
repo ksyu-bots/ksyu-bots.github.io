@@ -595,7 +595,7 @@ function bootSite(LOADED, GH) {
   var CAT_NAME = {}; CATS.forEach(function (c) { CAT_NAME[c[0]] = c[1]; });
   var PRESET_TAGS = ["от врагов к любви", "запретная любовь", "слоуберн", "одержимость", "стекло", "второй шанс", "юмор", "забота", "мезальянс", "тайна", "друзья детства", "любовный треугольник", "с ребёнком", "приключения", "хоррор", "хэллоуин", "апокалипсис", "выживание", "попаданка", "брак по расчёту", "антигероиня", "школа", "без романтизации", "сильная гг", "18+", "бот-девушка", "wlw", "mlm"];
   function gens(b) { return Array.isArray(b.genres) ? b.genres : []; }
-  var PLATFORMS = ["Character.AI", "Janitor AI", "Tipsy", "Moescape", "Xoul", "HiWaifu", "Lizlis", "SeaSoul", "Chai", "DokiChat", "Sakura", "TalaForge", "Telegraph", "Hi AI", "Chub AI"];
+  var PLATFORMS = ["Character.AI", "Janitor AI", "Tipsy", "Moescape", "Xoul", "HiWaifu", "Lizlis", "SeaSoul", "Chai", "DokiChat", "Sakura", "TalaForge", "Telegraph", "Chub AI"];
   function guessPlatform(u) {
     var h = ""; try { h = new URL(u).hostname.toLowerCase(); } catch (e) {}
     if (/janitor/.test(h)) return "Janitor AI";
@@ -604,7 +604,6 @@ function bootSite(LOADED, GH) {
     if (/chub/.test(h)) return "Chub AI";
     if (/spicychat/.test(h)) return "SpicyChat";
     if (/talkie/.test(h)) return "Talkie";
-    if (/hiai|hi-ai/.test(h)) return "Hi AI";
     if (/moescape/.test(h)) return "Moescape";
     if (/xoul/.test(h)) return "Xoul";
     if (/hiwaifu/.test(h)) return "HiWaifu";
@@ -1530,13 +1529,15 @@ var GHAPI = (function () {
   return { load: load, loginDialog: loginDialog, logout: function () { setToken(""); } };
 })();
 
+var bootMsg = document.createElement("p"); bootMsg.className = "boot-msg"; bootMsg.textContent = "Открываю библиотеку…";
+(document.querySelector("main") || document.body).prepend(bootMsg);
 GHAPI.load().then(function (r) {
+  bootMsg.remove();
   var d = r.data;
   if (!d || !Array.isArray(d.bots)) d = { channel: "", bots: [] };
   bootSite(d, r.gh);
 }).catch(function () {
-  var m = document.createElement("p"); m.className = "boot-msg";
+  var m = bootMsg;
   m.textContent = "Не получилось загрузить библиотеку. Обнови страницу через минуту.";
-  var main = document.querySelector("main"); (main || document.body).prepend(m);
 });
 </script></body></html>

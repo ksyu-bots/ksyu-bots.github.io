@@ -3820,10 +3820,55 @@
    "tags": [
     "запретная любовь",
     "слоуберн",
-    "одержимость"
+    "одержимость",
+    "тайна",
+    "друзья детства",
+    "любовный треугольник",
+    "брак по расчёту"
    ],
-   "links": [],
-   "postUrl": "",
+   "links": [
+    {
+     "platform": "Character.AI",
+     "url": "https://share.character.ai/Wv9R/osec6skg"
+    },
+    {
+     "platform": "Janitor AI",
+     "url": "https://janitorai.com/ru/characters/811764ee-669e-47b0-8795-f1a5850c36aa_character-adriel"
+    },
+    {
+     "platform": "Moescape",
+     "url": "https://moescape.ai/tavern/characters/134bf73b-8f3c-48bc-aece-608e97c45073"
+    },
+    {
+     "platform": "Xoul",
+     "url": "https://xoul.ai/xoul/AdrielAdrielAdrielAdriel.xo"
+    },
+    {
+     "platform": "HiWaifu",
+     "url": "https://www.hiwaifu.com/share/26270851"
+    },
+    {
+     "platform": "Lizlis",
+     "url": "https://lizlis.ai/app/ru/story/5bdca179-184a-43a7-8502-4dfa9133c9ac"
+    },
+    {
+     "platform": "SeaSoul",
+     "url": "https://www.seasoul.ai/character-chat?characterId=dbsm4kde878c73a5v7pg"
+    },
+    {
+     "platform": "Chai",
+     "url": "https://web.chai-research.com/chat/_bot_dbbd9b63-69be-4f5e-9216-ef40cf880504"
+    },
+    {
+     "platform": "DokiChat",
+     "url": "https://www.dokichat.club/ru/role/01a1de26-39ea-79cd-b82e-8717a62f1239?isShare=true"
+    },
+    {
+     "platform": "Telegraph",
+     "url": "https://telegra.ph/Adriehl-11-15"
+    }
+   ],
+   "postUrl": "https://t.me/Ksyu0102bots/257",
    "added": "2026-11-12",
    "img": "img/badriel.jpg",
    "imgData": ""

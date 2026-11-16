@@ -242,6 +242,62 @@ aside { display: grid; gap: 18px; }
 /* ---------- footer ---------- */
 .foot { text-align: center; font-family: var(--f-head); font-style: italic; color: var(--soot); font-size: 1rem; padding-top: 4px; }
 .foot a { font-weight: 700; }
+/* ---------- лента ---------- */
+.feed-intro { margin: -4px 0 14px; font-style: italic; color: var(--ink-soft); }
+.feed-wrap { max-width: 600px; margin: 0 auto; display: grid; gap: 16px; min-width: 0; }
+#feed-add { justify-self: start; }
+#feed-list { display: grid; gap: 18px; min-width: 0; }
+.stories { display: flex; gap: 12px; overflow-x: auto; padding: 4px 2px 8px; scrollbar-width: thin; }
+.story { flex: 0 0 auto; width: 74px; display: grid; justify-items: center; gap: 4px; background: none; border: 0; padding: 0; cursor: pointer; font: inherit; color: var(--ink); }
+.story .ava { width: 62px; height: 62px; box-shadow: 0 0 0 2px var(--parch), 0 0 0 4px var(--wine); }
+.story[aria-current="true"] .ava { box-shadow: 0 0 0 2px var(--parch), 0 0 0 4px var(--brass); }
+.story span { font-family: var(--f-head); font-weight: 600; font-size: .85rem; line-height: 1.1; text-align: center; max-width: 74px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ava { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; object-position: 50% 18%; flex: 0 0 auto; display: block; background: var(--soot); border: 1px solid var(--soot); }
+.ava.big { width: 96px; height: 96px; box-shadow: 0 0 0 3px var(--parch), 0 0 0 5px var(--wine); }
+.ava.leya-ava { object-fit: cover; object-position: 50% 8%; background: var(--parch-dk); }
+.ava-ph { display: grid; place-items: center; color: var(--bone); font-family: var(--f-head); font-weight: 700; font-size: 1.2rem; }
+.ava.big.ava-ph { font-size: 2.4rem; }
+.post { background: var(--parch); border: 1px solid var(--ink-soft); box-shadow: inset 0 0 0 4px var(--parch), inset 0 0 0 5px var(--parch-dk), 3px 4px 0 rgba(0,0,0,.28); padding: 12px 14px 12px; display: grid; gap: 10px; min-width: 0; }
+.post-head { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.post-who { display: flex; align-items: center; gap: 10px; background: none; border: 0; padding: 0; cursor: pointer; font: inherit; color: inherit; text-align: left; min-width: 0; flex: 1; }
+.who-txt { display: grid; min-width: 0; line-height: 1.15; }
+.who-txt b { font-family: var(--f-head); font-weight: 700; font-size: 1.15rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nick { font-size: .85rem; color: var(--wine); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.post-date { font-size: .82rem; color: var(--ink-soft); font-style: italic; white-space: nowrap; }
+.post-pic { margin: 0 -14px; background: var(--soot); border-block: 1px solid var(--soot); }
+.post-pic img { display: block; width: 100%; max-height: 640px; object-fit: contain; }
+.post-text { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.ht { color: var(--wine); font-weight: 500; }
+.post-acts { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.post-acts .grow { flex: 1; }
+.btn.small { font-size: .85rem; padding: 3px 10px; }
+.soon-note { font-size: .85rem; font-style: italic; color: var(--wine); }
+.like { width: 38px; height: 38px; display: grid; place-items: center; background: none; border: 0; padding: 0; cursor: pointer; }
+.like svg { width: 26px; height: 26px; fill: transparent; stroke: var(--wine); stroke-width: 1.8; transition: transform .15s; }
+.like[aria-pressed="true"] svg { fill: var(--wine-hi); stroke: var(--wine-hi); transform: scale(1.12); }
+.comments { list-style: none; margin: 0; padding: 10px 0 0; border-top: 1px dashed var(--ink-soft); display: grid; gap: 8px; font-size: .95rem; }
+.comments li { display: flex; gap: 8px; align-items: flex-start; min-width: 0; }
+.comments li > div { min-width: 0; overflow-wrap: anywhere; }
+.cm-ava { background: none; border: 0; padding: 0; cursor: pointer; }
+.cm-ava .ava { width: 30px; height: 30px; }
+.cm-name { background: none; border: 0; padding: 0; cursor: pointer; font-family: var(--f-head); font-weight: 700; font-size: 1rem; color: var(--ink); }
+.profile { background: var(--parch); border: 1px solid var(--ink-soft); box-shadow: inset 0 0 0 4px var(--parch), inset 0 0 0 5px var(--wine), 3px 4px 0 rgba(0,0,0,.28); padding: 18px 16px; display: flex; gap: 16px; align-items: flex-start; min-width: 0; }
+.prof-txt { min-width: 0; flex: 1; display: grid; gap: 2px; }
+.prof-txt h3 { margin: 0; font-family: var(--f-head); font-weight: 700; font-size: 1.6rem; line-height: 1.1; }
+.prof-count { font-size: .85rem; color: var(--ink-soft); }
+.bio { margin: 6px 0 0; font-style: italic; }
+.profile .actions { margin-top: 8px; }
+.cmrow { display: grid; grid-template-columns: minmax(0, 11em) minmax(0, 1fr) auto; gap: 6px; margin-bottom: 6px; }
+@media (max-width: 520px) {
+  .profile { flex-direction: column; align-items: center; text-align: center; }
+  .profile .actions { justify-content: center; }
+  .post { padding: 10px 10px; }
+  .post-pic { margin: 0 -10px; }
+  .cmrow { grid-template-columns: minmax(0, 1fr) auto; }
+  .cmrow .cm-text { grid-column: 1; grid-row: 2; }
+  .cmrow .lk-x { grid-column: 2; grid-row: 1 / 3; }
+}
+
 .foot .owner-link { display: block; margin: 6px auto 0; background: none; border: 0; font: inherit; font-size: .8rem; color: var(--soot); opacity: .55; text-decoration: underline; cursor: pointer; }
 .hc-group { display: grid; gap: 4px; }
 .hc-group .label { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
@@ -467,6 +523,7 @@ body.dlg-open .leya, body.dlg-open .leya-wake { visibility: hidden; }
       <ul>
         <li><a href="#home" data-route="home">Святилище</a></li>
         <li><a href="#library" data-route="library">Библиотека</a></li>
+        <li><a href="#feed" data-route="feed">Лента</a></li>
         <li><a href="#soon" data-route="soon">В работе</a></li>
         <li><a href="#fav" data-route="fav">Избранное <span class="favcount" id="fav-count"></span></a></li>
         <li><button type="button" id="nav-oracle">Гадальный шар</button></li>
@@ -564,6 +621,16 @@ body.dlg-open .leya, body.dlg-open .leya-wake { visibility: hidden; }
           <div class="chips" id="order-chips"><button type="button" class="chip small" data-order="new" aria-pressed="true">Сначала новые</button><button type="button" class="chip small" data-order="old" aria-pressed="false">Сначала старые</button></div>
         </div>
         <div class="grid" id="library-grid"></div>
+      </section>
+
+      <section id="v-feed" hidden="">
+        <h2 class="section-title">Лента персонажей <small class="count" id="feed-count"></small></h2>
+        <p class="feed-intro">Здесь персонажи сами рассказывают о своей жизни. Нажми на имя, чтобы открыть профиль.</p>
+        <div class="feed-wrap">
+          <button class="btn" type="button" id="feed-add" data-feed="add" hidden>+ Пост</button>
+          <div class="stories" id="feed-stories" hidden></div>
+          <div id="feed-list"></div>
+        </div>
       </section>
 
       <section id="v-soon" hidden="">
@@ -800,10 +867,10 @@ function bootSite(LOADED, GH) {
     $("fav-grid").innerHTML = list.length ? list.map(cardHtml).join("")
       : '<div class="empty-state" style="grid-column:1/-1"><h3>Здесь пока пусто</h3><p>Нажми на сердечко на карточке бота, и он появится здесь. Избранное хранится в этом браузере.</p></div>';
   }
-  function renderAll() { renderHome(); renderLibrary(); renderSoon(); renderFav(); }
+  function renderAll() { renderHome(); renderLibrary(); renderSoon(); renderFav(); renderFeed(); }
 
   // ---------- routing ----------
-  var ROUTES = ["home", "library", "soon", "fav"];
+  var ROUTES = ["home", "library", "feed", "soon", "fav"];
   function route() {
     var r = (location.hash || "").slice(1);
     if (ROUTES.indexOf(r) < 0) r = "home";
@@ -813,6 +880,7 @@ function bootSite(LOADED, GH) {
     });
   }
   window.addEventListener("hashchange", route);
+  document.querySelector('.nav a[data-route="feed"]').addEventListener("click", function () { feedProfile = ""; renderFeed(); });
 
   // ---------- dialog ----------
   var lastFocus = null;
@@ -1340,6 +1408,198 @@ function bootSite(LOADED, GH) {
     }
   });
 
+  // ---------- лента персонажей ----------
+  var feedProfile = "", pendingPostFile = null;
+  var LIKE_KEY = "ksyu-likes", likes = [];
+  try { likes = JSON.parse(localStorage.getItem(LIKE_KEY) || "[]"); if (!Array.isArray(likes)) likes = []; } catch (e) { likes = []; }
+  function postsOf() { return Array.isArray(state.posts) ? state.posts : []; }
+  var TR = { "а":"a","б":"b","в":"v","г":"g","д":"d","е":"e","ё":"e","ж":"zh","з":"z","и":"i","й":"y","к":"k","л":"l","м":"m","н":"n","о":"o","п":"p","р":"r","с":"s","т":"t","у":"u","ф":"f","х":"h","ц":"ts","ч":"ch","ш":"sh","щ":"sch","ъ":"","ы":"y","ь":"","э":"e","ю":"yu","я":"ya" };
+  function autoNick(name) {
+    var s = String(name || "").toLowerCase().split("").map(function (c) { return TR[c] != null ? TR[c] : c; }).join("");
+    s = s.replace(/[^a-z0-9]+/g, ".").replace(/^\.+|\.+$/g, "");
+    return s || "bot";
+  }
+  // Автор поста: бот из каталога или Лея.
+  function author(id) {
+    if (id === "leya") {
+      var M = state.mascot || {}, prof = (state.profiles || {}).leya || {};
+      return { id: "leya", name: M.name || "Лея", nick: prof.nick || "leya.sanctum", bio: prof.bio || "Хранительница святилища. Знает всех ботов в лицо.", src: M.poses ? fileSrc(M.poses.stand) : "", leya: true };
+    }
+    var b = findBot(id); if (!b) return null;
+    var p = (state.profiles || {})[id] || {};
+    return { id: id, name: b.name, nick: p.nick || autoNick(b.name), bio: p.bio || b.short || "", src: imgSrc(b), bot: b };
+  }
+  function avaHtml(a, big) {
+    var cls = "ava" + (big ? " big" : "") + (a.leya ? " leya-ava" : "");
+    return a.src ? '<img class="' + cls + '" src="' + esc(a.src) + '" alt="">' : '<span class="' + cls + ' ava-ph">' + esc(a.name.charAt(0)) + "</span>";
+  }
+  function postText(t) {
+    return esc(t).replace(/(^|\s)(#[\wа-яё]+)/gi, '$1<span class="ht">$2</span>');
+  }
+  function byPostDate(a, b) { return String(b.date || "").localeCompare(String(a.date || "")) || (b.ts || 0) - (a.ts || 0); }
+  function postHtml(p) {
+    var a = author(p.bot); if (!a) return "";
+    var liked = likes.indexOf(p.id) >= 0, src = fileSrc(p.img);
+    var comments = (p.comments || []).map(function (c) {
+      var ca = author(c.bot); if (!ca) return "";
+      return '<li>' + '<button type="button" class="cm-ava" data-feed="profile" data-bot="' + esc(ca.id) + '">' + avaHtml(ca) + "</button>" +
+        '<div><button type="button" class="cm-name" data-feed="profile" data-bot="' + esc(ca.id) + '">' + esc(ca.name) + "</button> " + postText(c.text) + "</div></li>";
+    }).join("");
+    return '<article class="post">' +
+      '<header class="post-head"><button type="button" class="post-who" data-feed="profile" data-bot="' + esc(a.id) + '">' + avaHtml(a) +
+      '<span class="who-txt"><b>' + esc(a.name) + '</b><span class="nick">@' + esc(a.nick) + "</span></span></button>" +
+      '<time class="post-date">' + esc(fmtDate(p.date)) + "</time></header>" +
+      (src ? '<div class="post-pic"><img src="' + esc(src) + '" alt="" loading="lazy"></div>' : "") +
+      (p.text ? '<p class="post-text">' + postText(p.text) + "</p>" : "") +
+      '<div class="post-acts"><button type="button" class="like" data-feed="like" data-post="' + esc(p.id) + '" aria-pressed="' + liked + '" aria-label="Нравится">' + heartSvg() + "</button>" +
+      (a.bot && a.bot.status !== "soon" ? '<button type="button" class="btn ghost small" data-feed="bot" data-bot="' + esc(a.id) + '">Поговорить</button>' : "") +
+      (a.bot && a.bot.status === "soon" ? '<span class="soon-note">скоро на канале</span>' : "") +
+      (canEdit ? '<span class="grow"></span><button type="button" class="btn ghost small" data-feed="edit" data-post="' + esc(p.id) + '">Изменить</button>' : "") +
+      "</div>" +
+      (comments ? '<ul class="comments">' + comments + "</ul>" : "") +
+      "</article>";
+  }
+  function renderFeed() {
+    var all = postsOf().slice().sort(byPostDate), list = all, head = "";
+    if (feedProfile) {
+      var a = author(feedProfile);
+      if (!a) feedProfile = "";
+      else {
+        list = all.filter(function (p) { return p.bot === feedProfile; });
+        head = '<div class="profile">' + avaHtml(a, true) + '<div class="prof-txt"><h3>' + esc(a.name) + '</h3><div class="nick">@' + esc(a.nick) + "</div>" +
+          '<div class="prof-count">' + list.length + " " + plural(list.length, "пост", "поста", "постов") + "</div>" +
+          (a.bio ? '<p class="bio">' + esc(a.bio) + "</p>" : "") +
+          '<div class="actions">' + (a.bot ? '<button type="button" class="btn" data-feed="bot" data-bot="' + esc(a.id) + '">Карточка персонажа</button>' : "") +
+          (canEdit ? '<button type="button" class="btn ghost" data-feed="prof-edit" data-bot="' + esc(a.id) + '">Ник и описание</button>' : "") +
+          '<button type="button" class="btn ghost" data-feed="all">← Вся лента</button></div></div></div>';
+      }
+    }
+    var who = {};
+    all.forEach(function (p) { who[p.bot] = (who[p.bot] || 0) + 1; });
+    var stories = Object.keys(who).map(author).filter(Boolean).map(function (a) {
+      return '<button type="button" class="story" data-feed="profile" data-bot="' + esc(a.id) + '"' + (a.id === feedProfile ? ' aria-current="true"' : "") + ">" + avaHtml(a) + "<span>" + esc(a.name) + "</span></button>";
+    }).join("");
+    $("feed-count").textContent = all.length ? all.length + " " + plural(all.length, "пост", "поста", "постов") : "";
+    $("feed-stories").innerHTML = stories;
+    $("feed-stories").hidden = !stories || !!feedProfile;
+    $("feed-add").hidden = !canEdit;
+    $("feed-list").innerHTML = head + (list.length ? list.map(postHtml).join("") :
+      '<div class="empty-state"><h3>' + (feedProfile ? "Постов пока нет" : "Лента пока пуста") + "</h3><p>" +
+      (canEdit ? "Нажми «+ Пост», чтобы персонаж что-нибудь написал." : "Скоро персонажи начнут делиться своей жизнью.") + "</p></div>");
+  }
+  function plural(n, a, b, c) { var m = n % 10, h = n % 100; return m === 1 && h !== 11 ? a : m >= 2 && m <= 4 && (h < 10 || h >= 20) ? b : c; }
+
+  function authorOptions(sel) {
+    var bots = state.bots.slice().sort(function (x, y) { return String(x.name).localeCompare(String(y.name), "ru"); });
+    return '<option value="leya"' + (sel === "leya" ? " selected" : "") + ">Лея (маскот)</option>" + bots.map(function (b) {
+      return '<option value="' + esc(b.id) + '"' + (b.id === sel ? " selected" : "") + ">" + esc(b.name) + (b.status === "soon" ? " (в работе)" : "") + "</option>";
+    }).join("");
+  }
+  function commentRow(c) {
+    return '<div class="cmrow"><select class="cm-bot" aria-label="Кто пишет">' + authorOptions(c.bot) + "</select>" +
+      '<input type="text" class="cm-text" placeholder="Текст комментария" value="' + esc(c.text) + '">' +
+      '<button type="button" class="lk-x" data-feed="rm-cm" aria-label="Убрать комментарий">×</button></div>';
+  }
+  function postForm(p) {
+    p = p || { bot: feedProfile || "", text: "", date: today(), comments: [] };
+    pendingPostFile = null;
+    var src = fileSrc(p.img);
+    openDialog('<form class="form" id="post-form" novalidate><h2 id="dlg-title">' + (p.id ? "Изменить пост" : "Новый пост") + "</h2>" +
+      '<div class="field"><label for="p-bot">От кого</label><select id="p-bot">' + authorOptions(p.bot) + "</select></div>" +
+      '<div class="field"><label for="p-text">Текст поста</label><span class="hint">От лица персонажа. Хэштеги через # подсветятся</span><textarea id="p-text" rows="5">' + esc(p.text) + "</textarea></div>" +
+      '<div class="field"><span class="lbl">Картинка</span><div class="imgrow"><div class="preview" id="p-preview">' + (src ? '<img src="' + esc(src) + '" alt="">' : "") + "</div>" +
+      '<div><input type="file" id="p-img" accept="image/jpeg,image/png,image/webp,image/*"><div class="hint">Необязательно. JPG, PNG или WEBP</div>' +
+      (src ? '<label style="display:block;margin-top:6px"><input type="checkbox" id="p-noimg"> Убрать картинку</label>' : "") + "</div></div></div>" +
+      '<div class="field"><span class="lbl">Комментарии других персонажей</span><div id="p-cms">' + (p.comments || []).map(commentRow).join("") + "</div>" +
+      '<div><button type="button" class="btn ghost" data-feed="add-cm">+ комментарий</button></div></div>' +
+      '<div class="field"><label for="p-date">Дата</label><input type="text" id="p-date" placeholder="ГГГГ-ММ-ДД" value="' + esc(p.date || today()) + '" style="max-width:160px"></div>' +
+      '<p class="err" id="p-err" role="alert" hidden></p>' +
+      '<div class="actions" style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" type="submit" id="p-save">Опубликовать</button><button class="btn ghost" type="button" data-act="close">Отмена</button>' +
+      (p.id ? '<span class="grow"></span><button type="button" class="btn ghost" data-feed="ask-del">Удалить пост</button>' : "") + "</div>" +
+      (p.id ? '<div class="confirm" id="p-confirm" hidden><span>Удалить этот пост?</span><button type="button" class="btn" data-feed="del" data-post="' + esc(p.id) + '">Да, удалить</button><button type="button" class="btn ghost" data-feed="no-del">Нет</button></div>' : "") +
+      '<input type="hidden" id="p-id" value="' + esc(p.id || "") + '"></form>');
+  }
+  function findPost(id) { var l = postsOf(); for (var i = 0; i < l.length; i++) if (l[i].id === id) return l[i]; return null; }
+  function submitPost(e) {
+    e.preventDefault();
+    var err = $("p-err"), text = $("p-text").value.trim(), date = $("p-date").value.trim();
+    var old = findPost($("p-id").value) || {};
+    var noimg = $("p-noimg") && $("p-noimg").checked;
+    if (!text && !pendingPostFile && (noimg || !old.img)) { err.textContent = "Напиши текст или добавь картинку."; err.hidden = false; return; }
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) { err.textContent = "Дата в формате ГГГГ-ММ-ДД, например " + today() + "."; err.hidden = false; return; }
+    var comments = [];
+    document.querySelectorAll("#p-cms .cmrow").forEach(function (r) {
+      var t = r.querySelector(".cm-text").value.trim(); if (t) comments.push({ bot: r.querySelector(".cm-bot").value, text: t });
+    });
+    var post = { id: old.id || ("p" + Date.now().toString(36)), bot: $("p-bot").value, text: text, date: date, img: noimg ? "" : (old.img || ""), comments: comments, ts: old.ts || Date.now() };
+    err.hidden = true;
+    var btn = $("p-save"); btn.disabled = true; btn.textContent = "Публикую…";
+    var step = pendingPostFile ? attachImage(pendingPostFile, post) : Promise.resolve();
+    step.then(function () {
+      delete post.imgData;
+      var next = clone(state); if (!Array.isArray(next.posts)) next.posts = [];
+      var i = next.posts.findIndex(function (x) { return x.id === post.id; });
+      if (i >= 0) next.posts[i] = post; else next.posts.push(post);
+      return save(next, old.id ? "Пост изменён" : "Пост опубликован");
+    }).then(closeDialog, function (x) {
+      btn.disabled = false; btn.textContent = "Опубликовать";
+      err.textContent = x && x.code === "decode" ? "Этот формат картинки не открывается. Сохрани её как JPG или PNG." : ($("status").textContent || "Не получилось сохранить");
+      err.hidden = false;
+    });
+  }
+  function profileForm(id) {
+    var a = author(id); if (!a) return;
+    openDialog('<form class="form" id="prof-form" novalidate><h2 id="dlg-title">Профиль: ' + esc(a.name) + "</h2>" +
+      '<div class="field"><label for="pr-nick">Ник</label><span class="hint">Латиницей, без @. Пусто — придумается сам</span><input type="text" id="pr-nick" value="' + esc(((state.profiles || {})[id] || {}).nick || "") + '" placeholder="' + esc(a.nick) + '"></div>' +
+      '<div class="field"><label for="pr-bio">Описание профиля</label><span class="hint">Как «шапка» в соцсети, от лица персонажа. Пусто — возьмётся короткое описание бота</span><textarea id="pr-bio" rows="3">' + esc(((state.profiles || {})[id] || {}).bio || "") + "</textarea></div>" +
+      '<div class="actions" style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" type="submit">Сохранить</button><button class="btn ghost" type="button" data-act="close">Отмена</button></div>' +
+      '<input type="hidden" id="pr-id" value="' + esc(id) + '"></form>');
+  }
+  document.addEventListener("click", function (e) {
+    var t = e.target.closest("[data-feed]"); if (!t) return;
+    var f = t.getAttribute("data-feed");
+    if (f === "profile") { feedProfile = t.getAttribute("data-bot"); if (location.hash !== "#feed") location.hash = "feed"; closeDialog(); renderFeed(); $("v-feed").scrollIntoView({ block: "start" }); }
+    else if (f === "all") { feedProfile = ""; renderFeed(); }
+    else if (f === "bot") showBot(t.getAttribute("data-bot"));
+    else if (f === "like") {
+      var id = t.getAttribute("data-post"), i = likes.indexOf(id);
+      if (i >= 0) likes.splice(i, 1); else likes.push(id);
+      try { localStorage.setItem(LIKE_KEY, JSON.stringify(likes)); } catch (x) {}
+      t.setAttribute("aria-pressed", i < 0 ? "true" : "false");
+    }
+    else if (f === "add") postForm();
+    else if (f === "edit") postForm(findPost(t.getAttribute("data-post")));
+    else if (f === "add-cm") { $("p-cms").insertAdjacentHTML("beforeend", commentRow({ bot: "", text: "" })); var r = $("p-cms").querySelectorAll(".cm-text"); r[r.length - 1].focus(); }
+    else if (f === "rm-cm") t.closest(".cmrow").remove();
+    else if (f === "ask-del") $("p-confirm").hidden = false;
+    else if (f === "no-del") $("p-confirm").hidden = true;
+    else if (f === "del") {
+      var pid = t.getAttribute("data-post"), next = clone(state);
+      next.posts = postsOf().filter(function (x) { return x.id !== pid; });
+      t.disabled = true;
+      save(next, "Пост удалён").then(closeDialog, function () { t.disabled = false; });
+    }
+    else if (f === "prof-edit") profileForm(t.getAttribute("data-bot"));
+  });
+  document.addEventListener("submit", function (e) {
+    if (e.target.id === "post-form") submitPost(e);
+    else if (e.target.id === "prof-form") {
+      e.preventDefault();
+      var id = $("pr-id").value, next = clone(state);
+      if (!next.profiles || typeof next.profiles !== "object") next.profiles = {};
+      var nick = $("pr-nick").value.trim().replace(/^@/, "").replace(/[^A-Za-z0-9._]/g, ""), bio = $("pr-bio").value.trim();
+      if (nick || bio) next.profiles[id] = { nick: nick, bio: bio }; else delete next.profiles[id];
+      save(next, "Профиль сохранён").then(closeDialog, function () {});
+    }
+  });
+  document.addEventListener("change", function (e) {
+    if (e.target.id === "p-img" && e.target.files && e.target.files[0]) {
+      pendingPostFile = e.target.files[0];
+      $("p-preview").innerHTML = '<img src="' + URL.createObjectURL(pendingPostFile) + '" alt="">';
+      if ($("p-noimg")) $("p-noimg").checked = false;
+    }
+  });
+
   function clone(o) { return JSON.parse(JSON.stringify(o)); }
 
   function submitForm(e) {
@@ -1474,9 +1734,24 @@ function bootSite(LOADED, GH) {
     var r = new FileReader();
     r.onload = function () {
       var data; try { data = JSON.parse(r.result); } catch (e) { setStatus("Это не тот файл: не получилось его прочитать"); return; }
-      var list = Array.isArray(data) ? data : (data && Array.isArray(data.bots) ? data.bots : null);
-      if (!list || !list.length) { setStatus("В файле нет ботов"); return; }
-      var next = clone(state), added = 0, updated = 0;
+      var list = Array.isArray(data) ? data : (data && Array.isArray(data.bots) ? data.bots : []);
+      var plist = data && Array.isArray(data.posts) ? data.posts : [];
+      if (!list.length && !plist.length) { setStatus("В файле нет ботов"); return; }
+      var next = clone(state), added = 0, updated = 0, padded = 0;
+      if (!Array.isArray(next.posts)) next.posts = [];
+      plist.forEach(function (p) {
+        if (!p || !p.bot) return;
+        p = clone(p);
+        if (!p.id) p.id = "p" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+        var pm = String(p.imgData || "").match(/^data:image\/(jpeg|png|webp);base64,(.+)$/);
+        if (pm) { var pp = "img/post-" + String(p.id).replace(/[^\w-]/g, "") + "." + (pm[1] === "jpeg" ? "jpg" : pm[1]); pendingImgs[pp] = pm[2]; previews[pp] = p.imgData; p.img = pp; }
+        delete p.imgData;
+        if (!p.ts) p.ts = Date.now() + padded;
+        var k = next.posts.findIndex(function (x) { return x.id === p.id; });
+        if (k >= 0) next.posts[k] = p; else next.posts.push(p);
+        padded++;
+      });
+      if (data && data.profiles && typeof data.profiles === "object") { next.profiles = Object.assign({}, next.profiles || {}, data.profiles); }
       list.forEach(function (b) {
         if (!b || !b.name) return;
         b = clone(b);
@@ -1489,8 +1764,8 @@ function bootSite(LOADED, GH) {
         var i = next.bots.findIndex(function (x) { return x.id === b.id || (b.postUrl && x.postUrl === b.postUrl); });
         if (i >= 0) { b.id = next.bots[i].id; next.bots[i] = b; updated++; } else { next.bots.push(b); added++; }
       });
-      if (!added && !updated) { setStatus("В файле нет ботов"); return; }
-      save(next, "Добавлено ботов: " + added + (updated ? ", обновлено: " + updated : "")).catch(function () {});
+      if (!added && !updated && !padded) { setStatus("В файле нет ботов"); return; }
+      save(next, (added || updated ? "Добавлено ботов: " + added + (updated ? ", обновлено: " + updated : "") : "") + (padded ? (added || updated ? ", " : "") + "постов в ленте: " + padded : "")).catch(function () {});
     };
     r.onerror = function () { setStatus("Не получилось открыть файл"); };
     r.readAsText(f);

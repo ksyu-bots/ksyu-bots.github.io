@@ -6535,15 +6535,56 @@
     "medieval"
    ],
    "races": [],
-   "status": "soon",
+   "status": "live",
    "tags": [
     "от врагов к любви",
     "запретная любовь",
     "слоуберн",
     "без романтизации"
    ],
-   "links": [],
-   "postUrl": "",
+   "links": [
+    {
+     "platform": "Character.AI",
+     "url": "https://share.character.ai/Wv9R/ein3kbxf"
+    },
+    {
+     "platform": "Janitor AI",
+     "url": "https://janitorai.com/ru/characters/dad6ffb6-5032-4272-bbbc-350351d83603_character-kalrit"
+    },
+    {
+     "platform": "Xoul",
+     "url": "https://xoul.ai/xoul/KalritKalritKalrit.xo"
+    },
+    {
+     "platform": "Moescape",
+     "url": "https://moescape.ai/tavern/characters/f7c09357-4b94-4c04-b4d9-77a8a2b698c2"
+    },
+    {
+     "platform": "HiWaifu",
+     "url": "https://www.hiwaifu.com/share/26392219"
+    },
+    {
+     "platform": "SeaSoul",
+     "url": "https://www.seasoul.ai/character-chat?characterId=dbum185e878c73ecdp3g"
+    },
+    {
+     "platform": "DokiChat",
+     "url": "https://www.dokichat.club/ru/role/01a1edc0-315b-7ddc-b5f9-185aeb19ceab?isShare=true"
+    },
+    {
+     "platform": "Lizlis",
+     "url": "https://lizlis.ai/app/ru/story/7a1737da-9ef8-5aea-a232-0c5379b04e87"
+    },
+    {
+     "platform": "Chai",
+     "url": "https://web.chai-research.com/chat/_bot_a9303d62-cf48-4ba6-a5bc-31713e6059a4"
+    },
+    {
+     "platform": "Telegraph",
+     "url": "https://telegra.ph/Kalrit-11-18"
+    }
+   ],
+   "postUrl": "https://t.me/Ksyu0102bots/276",
    "added": "2026-11-15",
    "img": "img/bmwhl8693-mwhl94un.jpg",
    "imgData": ""

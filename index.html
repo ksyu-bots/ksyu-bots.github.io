@@ -531,8 +531,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 /* главная картинка */
 .hero { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); align-items: center; gap: 8px; min-height: 440px; padding: 10px 0 0 8px; }
-.hero .branch { position: absolute; top: -64px; left: -70px; width: 210px; max-width: 45%; pointer-events: none; z-index: 0; opacity: .95; transform: rotate(-8deg); }
-.hero-txt { position: relative; z-index: 1; padding: 40px 0 30px 6%; min-width: 0; }
+.hero .branch { position: absolute; top: -96px; left: -78px; width: 190px; max-width: 45%; pointer-events: none; z-index: 0; opacity: .95; transform: rotate(-8deg); }
+.hero-txt { position: relative; z-index: 1; padding: 64px 0 30px 6%; min-width: 0; }
 .eyebrow { font-family: var(--f-body); font-size: .8rem; letter-spacing: .32em; text-transform: uppercase; color: var(--ink-soft); display: flex; align-items: center; gap: 12px; }
 .eyebrow::after { content: ""; width: 60px; height: 1px; background: var(--gold); }
 .hero h1 { margin: 10px 0 0; font-family: var(--f-head); font-weight: 500; font-size: clamp(2.6rem, 7.4vw, 5rem); line-height: .95; color: var(--ink); letter-spacing: -.01em; }
@@ -724,7 +724,7 @@ body:not([data-route="home"]) .cloud { display: none; }
 /* ---------- карусель ---------- */
 .carousel { position: relative; outline: none; overflow: hidden; padding: 10px 0 34px; margin: -10px 0 -24px; }
 .carousel:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; border-radius: 20px; }
-.car-track { position: relative; height: clamp(300px, 46vw, 430px); perspective: 1100px; touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: grab; }
+.car-track { position: relative; height: clamp(260px, 40vw, 400px); perspective: 1100px; touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: grab; }
 .car-track:active { cursor: grabbing; }
 .car-card { position: absolute; top: 0; left: 50%; width: clamp(180px, 26%, 290px); aspect-ratio: 3 / 4; max-width: 100%; border-radius: 22px; overflow: hidden; background: #e9dfd1; box-shadow: 0 18px 40px rgba(90,70,40,.25); transform-origin: 50% 60%; cursor: pointer; -webkit-tap-highlight-color: transparent; }
 .car-track.anim .car-card { transition: transform .6s cubic-bezier(.22,.8,.3,1), opacity .5s, filter .5s; }
@@ -2015,6 +2015,8 @@ function bootSite(LOADED, GH) {
   function layoutCarousel() {
     var n = CAR.items.length; if (!n) return;
     var w = $("car-track").offsetWidth, cw = w < 520 ? 0.42 : 0.26;
+    var first = $("car-track").querySelector(".car-card");
+    if (first && first.offsetHeight) $("car-track").style.height = (first.offsetHeight + 8) + "px";
     CAR.step = w * cw * 0.62;
     $("car-track").querySelectorAll(".car-card").forEach(function (el, i) {
       var d = wrapD(i - CAR.pos, n), a = Math.abs(d);
